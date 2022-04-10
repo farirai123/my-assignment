@@ -11,6 +11,7 @@ from keras.preprocessing.image import load_img
 
 from os import listdir
 from os.path import isfile, join
+from PIL import Image
 
 
 def classifyImages():
