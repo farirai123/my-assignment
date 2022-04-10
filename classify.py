@@ -2,11 +2,16 @@
                    #Farirai Masocha and Godknows Aresho
     ##############################################################################
 ################################
-import io
-import requests
-from PIL import Image
-r = requests.get('https://www.bimbaylola.com/media/catalog/product/1/8/182BAC104_T2200_P_T_XX_1.jpg', stream=True)
-aux_im = Image.open(io.BytesIO(r.content))
+import PIL
+from pathlib import Path
+from PIL import UnidentifiedImageError
+
+path = Path(".//data").rglob("*.jpg")
+for img_p in path:
+    try:
+        img = PIL.Image.open(img_p)
+    except PIL.UnidentifiedImageError:
+           
 ################################
 
 from keras.applications.vgg16 import VGG16
