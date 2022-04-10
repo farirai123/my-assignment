@@ -1,7 +1,13 @@
    ##############################################################################
                    #Farirai Masocha and Godknows Aresho
     ##############################################################################
-
+################################
+import io
+import requests
+from PIL import Image
+r = requests.get('https://www.bimbaylola.com/media/catalog/product/1/8/182BAC104_T2200_P_T_XX_1.jpg', stream=True)
+aux_im = Image.open(io.BytesIO(r.content))
+################################
 
 from keras.applications.vgg16 import VGG16
 from keras.applications.vgg16 import preprocess_input
