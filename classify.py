@@ -17,7 +17,7 @@ def classifyImages():
     model = VGG16()
     from keras.applications.vgg16 import decode_predictions
     classify = []
-    frames = [ join('.\data', f) for f in listdir('.\data') if isfile(join('.\data', f)) ]
+    frames = [ join('data/frame%d.jpg', f) for f in listdir('data/frame%d.jpg') if isfile(join('data/frame%d.jpg', f)) ]
     for i in range(len(frames)):    
         image = load_img(frames[i], target_size=(224, 224)) 
         image = img_to_array(image)
