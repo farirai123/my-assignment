@@ -3,9 +3,10 @@ import cv2 as cv
 import tempfile
 import os
 import cv2
+import classify as cs
 import split_video
 import io
-import classify as cs
+
 #############################################################################################
 def video_upload(file):
 	if file is not None:
