@@ -11,6 +11,7 @@ for img_p in path:
     try:
         img = PIL.Image.open(img_p)
     except PIL.UnidentifiedImageError:
+         pass
            
 ################################
 from keras.applications import vgg16
