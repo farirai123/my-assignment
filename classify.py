@@ -15,7 +15,7 @@ for img_p in path:
            
 ################################
 from keras.applications import vgg16
-from keras.applications import image as img
+from keras.preprocessing import image as img
 # from keras.applications.vgg16 import VGG16
 # from keras.applications.vgg16 import preprocess_input
 # from keras.applications.vgg16 import decode_predictions
