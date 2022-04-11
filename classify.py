@@ -15,6 +15,7 @@ for img_p in path:
            
 ################################
 from keras.applications import vgg16
+from keras.applications import image as img
 # from keras.applications.vgg16 import VGG16
 # from keras.applications.vgg16 import preprocess_input
 # from keras.applications.vgg16 import decode_predictions
@@ -32,8 +33,8 @@ def classifyImages():
     classify = []
     frames = [ join('.//data', f) for f in listdir('.//data') if isfile(join('.//data', f)) ]
     for i in range(len(frames)):    
-        image = vgg16.load_img(frames[i], target_size=(224, 224)) 
-        image = vgg16.img_to_array(image)
+        image = img.load_img(frames[i], target_size=(224, 224)) 
+        image = img.img_to_array(image)
         image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
         # prepare the image for the VGG model
         image = vgg16.preprocess_input(image)
